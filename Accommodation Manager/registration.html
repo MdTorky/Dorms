@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+<style>
+    h4{
+  font-family: Calibri; 
+  font-size: 25pt;         
+  font-style: normal; 
+  font-weight: bold; 
+  color: slateblue;
+  text-align: center; 
+  text-decoration: underline
+}
+
+table{
+  font-family: Calibri; 
+  color:white; 
+  font-size: 11pt; 
+  font-style: normal;
+  font-weight: bold;
+  text-align:; 
+  background-color: slateblue; 
+  border-collapse: collapse; 
+  border: 3px solid greenyellow
+}
+table.inner{
+  border: 0px
+}
+</style>
+</head>
+ 
+<body style="background-color:rgb(245, 237, 191);">
+    <form action="InsertContact" method="post">
+<h4>Register Student</h4>
+
+ 
+<table align="center" cellpadding = "10" class="tableOne">
+ 
+<!----- First Name ---------------------------------------------------------->
+<tr>
+<td>FIRST NAME</td>
+<td><input type="text" name="First_Name" maxlength="30"/>
+</td>
+</tr>
+<!----- Last Name ---------------------------------------------------------->
+<tr>
+<td>LAST NAME</td>
+<td><input type="text" name="Last_Name" maxlength="30"/>
+</td>
+</tr>
+<!----- Date Of Birth -------------------------------------------------------->
+    <tr>
+      <td>Date of birth</td>
+      <td> <input type="date"> </td>
+    </tr>
+<!----- Email Id ---------------------------------------------------------->
+<tr>
+<td>EMAIL ID</td>
+<td><input type="email" name="Email_Id" maxlength="100" /></td>
+</tr>
+<!----- Mobile Number ---------------------------------------------------------->
+<tr>
+<td>CONTACT</td>
+<td>
+<input type="text" name="Mobile_Number" maxlength="10" />
+
+</td>
+</tr>
+<!----- Gender ----------------------------------------------------------->
+<tr>
+<td>GENDER</td>
+<td>
+Male <input type="radio" name="Gender" value="Male" />
+Female <input type="radio" name="Gender" value="Female" />
+</td>
+</tr>
+<!----- Address ---------------------------------------------------------->
+<tr>
+<td>ADDRESS <br /><br /><br /></td>
+<td><textarea name="Address" rows="4" cols="30"></textarea></td>
+</tr>
+<!----- Country ---------------------------------------------------------->
+<tr>
+<td>COUNTRY</td>
+<td><input type="text" name="Country"   /></td>
+</tr>
+
+<!----- College ---------------------------------------------------------->
+<tr>
+  <td>College</td>
+  <td><input type="text" name="College"  /></td>
+  </tr>
+
+  <!----- Student ID ---------------------------------------------------------->
+<tr>
+  <td>Student ID</td>
+  <td><input type="text" name="College"  /></td>
+  </tr>
+    <!----- Check In date ID ---------------------------------------------------------->
+<tr>
+  <td>Check-In Date</td>
+  <td> <input type="date"> </td>
+</tr>
+
+<!----- Submit and Reset ------------------------------------------------->
+<tr>
+<td colspan="2" align="center">
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</td>
+</tr>
+</table>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colleges</title>
+    <link rel="stylesheet" href="./sylesheet.css">
+</head>
+
+<body>
+
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+<div class="wrapper">
+    <div class="sidebar">
+        <a href="./index.php"> <h2>PROFILE</h2> </a>
+        <ul>
+            
+            <li><a href="./application.html"><i class="Appication"></i>Appication</a></li>
+            <li><a href="./records.html"><i class="Records"></i>Reccords</a></li>
+            <li><a href="../DB/logout.php"><i class="Appication"></i>Log out</a></li>
+
+        </ul> 
+    </div>
+    <div class="main_content">
+      <div class="header">Accomodation Manager Dashboard </div>  
+
+         <!-- *************************************************Data Table  View******************************************************** -->
+    
+         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+         
+
+<p align="center"><button onclick="sortTable()">Sort Alphabetically</button></p>
+         <table id="myTable">
+           <tr class="header">
+            <th style="width:40%;">Name</th>
+            <th style="width:40%;">Matric Number</th>
+             <th style="width:40%;">Action</th>
+           </tr>
+           <tr>
+           
+             <td>Nafis Ahmed</td>
+             <td>A20EC4044</td>
+             <td> <span class="action_btn"> <a href="./registration.html" target="_blank">View</a> </span> </td>
+           </tr>
+            <tr>
+             <td>Shah Sajid</td>
+             <td>A20EC4050</td>
+             <td> <span class="action_btn"> <a href="./registration.html" target="_blank">View</a> </span> </td>
+           </tr>
+           
+           <tr>
+             <td>Tarek Torkey</td>
+             <td>A20EC123</td>
+             <td> <span class="action_btn"> <a href="./registration.html" target="_blank">View</a> </span> </td>
+           </tr>
+           
+           <tr>
+           <td>Shabrina Salsabila</td>
+           <td>A20EC1245</td>
+           <td> <span class="action_btn"> <a href="./registration.html" target="_blank">View</a> </span> </td>
+         </tr>
+         
+            <tr>
+             <td>Ahmed Ali</td>
+             <td>A20EC1524</td>
+             <td> <span class="action_btn"> <a href="./registration.html" target="_blank">View</a> </span> </td>
+             </tr>
+          
+          <tr>
+           <td>Chan Lee</td>
+           <td>A20EC1234</td>
+           <td> <span class="action_btn"> <a href="./registration.html" target="_blank">View</a> </span> </td>
+         </tr>
+
+         <tr>
+          <td>Zack Knight</td>
+          <td>A20EC1244</td>
+          <td> <span class="action_btn"> <a href="./registration.html" target="_blank">View</a> </span> </td>
+        </tr>
+
+        <tr>
+          <td>Bob Collins</td>
+          <td>A20EC1734</td>
+          <td> <span class="action_btn"> <a href="./registration.html" target="_blank">View</a> </span> </td>
+        </tr>
+         
+         </table>
+ <!-- *************************************************Java Scipt for table******************************************************** -->
+         <script>
+         function myFunction() {
+           var input, filter, table, tr, td, i, txtValue;
+           input = document.getElementById("myInput");
+           filter = input.value.toUpperCase();
+           table = document.getElementById("myTable");
+           tr = table.getElementsByTagName("tr");
+           for (i = 0; i < tr.length; i++) {
+             td = tr[i].getElementsByTagName("td")[0];
+             if (td) {
+               txtValue = td.textContent || td.innerText;
+               if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                 tr[i].style.display = "";
+               } else {
+                 tr[i].style.display = "none";
+               }
+             }       
+           }
+         }
+
+         
+
+         function sortTable() {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("myTable");
+  switching = true;
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[0];
+      y = rows[i + 1].getElementsByTagName("TD")[0];
+      //check if the two rows should switch place:
+      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+        //if so, mark as a switch and break the loop:
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+
+
+         </script>
+    </div>
+    
+    </div>
+
+   
+
+
+
+
+
+</div>
+</body>
+</html>

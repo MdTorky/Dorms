@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colleges</title>
+    <link rel="stylesheet" href="./sylesheet.css">
+    <link rel="stylesheet" href="./admin.css">
+</head>
+
+<body>
+
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+<div class="wrapper">
+    <div class="sidebar">
+        <a href="./index.html"> <h2>PROFILE</h2> </a>
+        <ul>
+            
+            <li><a href="./application.html"><i class="Appication"></i>Appication</a></li>
+            <li><a href="../Sign-in Page.html"><i class="Appication"></i>Log out</a></li>
+           
+
+        </ul> 
+    </div>
+    <div class="main_content">
+      <div class="header">Admin  Dashboard </div>  
+
+         <!-- *************************************************Data Table  View******************************************************** -->
+    
+         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+         <table id="myTable">
+           <tr class="header">
+            <th style="width:40%;">Student Name</th>
+            <th style="width:40%;">Matric Number </th>
+             <th style="width:40%;" colspan="2">Action</th>
+           </tr>
+           <tr>
+           
+             <td>Mahi Anan</td>
+             <td>A20EC4019</td>
+             <td> <span class="action_btn"> <a href="./registration.html" target="_blank">Edit</a> </span> </td>
+             <td> <span class="action_btn"> <a href="#" target="_blank">Delete</a> </span> </td>
+             
+             
+           </tr>
+            <tr>
+             <td>Tarek Torkey</td>
+             <td>A20EC2345</td>
+             <td> <span class="action_btn"> <a href="./registration.html" target="_blank">Edit</a> </span> </td>
+             <td> <span class="action_btn"> <a href="#" target="_blank">Delete</a> </span> </td>
+           </tr>
+           
+           <tr>
+             <td>Nafis Ahmed</td>
+             <td>A20EC0020</td>
+             <td> <span class="action_btn"> <a href="./registration.html" target="_blank">Edit</a> </span> </td>
+             <td> <span class="action_btn"> <a href="#" target="_blank">Delete</a> </span> </td>
+           </tr>
+           <tr>
+           <td>Shah Sajid</td>
+           <td>A20EC5565</td>
+           <td> <span class="action_btn"> <a href="./registration.html" target="_blank">Edit</a> </span> </td>
+           <td> <span class="action_btn"> <a href="#" target="_blank">Delete</a> </span> </td>
+         </tr>
+
+            <tr>
+             <td>Ashraf Khan</td>
+             <td>A20EC4565</td>
+             <td> <span class="action_btn"> <a href="./registration.html" target="_blank">Edit</a> </span> </td>
+             <td> <span class="action_btn"> <a href="#" target="_blank">Delete</a> </span> </td>
+             </tr>
+          
+          <tr>
+           <td>Salim</td>
+           <td>A20EC5000</td>
+           <td> <span class="action_btn"> <a href="./registration.html" target="_blank">Edit</a> </span> </td>
+           <td> <span class="action_btn"> <a href="#" target="_blank">Delete</a> </span> </td>
+         </tr>
+         
+         </table>
+ <!-- *************************************************Java Scipt for table******************************************************** -->
+         <script>
+         function myFunction() {
+           var input, filter, table, tr, td, i, txtValue;
+           input = document.getElementById("myInput");
+           filter = input.value.toUpperCase();
+           table = document.getElementById("myTable");
+           tr = table.getElementsByTagName("tr");
+           for (i = 0; i < tr.length; i++) {
+             td = tr[i].getElementsByTagName("td")[0];
+             if (td) {
+               txtValue = td.textContent || td.innerText;
+               if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                 tr[i].style.display = "";
+               } else {
+                 tr[i].style.display = "none";
+               }
+             }       
+           }
+         }
+         </script>
+         <br> <br> <br>
+         <td> <span class="action_btn"> <a href="./registration.html" target="_blank">Add New Student </a> </span> </td>
+         
+         
+    </div>
+    
+    </div>
+
+   
+
+
+
+
+
+</div>
+</body>
+</html>

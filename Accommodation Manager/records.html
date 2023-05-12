@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Records</title>
+    <link rel="stylesheet" href="./sylesheet.css">
+</head>
+<body>
+
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+<div class="wrapper">
+    <div class="sidebar">
+        <a href="./index.php"> <h2>PROFILE</h2> </a>
+        <ul>
+           
+            <li><a href="./application.html"><i class="Appication"></i>Appication</a></li>
+            <li><a href="./records.html"><i class="Records"></i>Reccords</a></li>
+            <li><a href="../DB/logout.php"><i class="Appication"></i>Log out</a></li>
+
+        </ul> 
+    </div>
+    <div class="main_content">
+        <div class="header">Accomodation Manager Dashboard </div> 
+        <div class="info">
+  <!-- ************************CODE FOR REMOVING DATA  TABLE********************** -->
+            
+         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+         <table id="myTable">
+           <tr class="header">
+            <th style="width:40%;">Name</th>
+            <th style="width:40%;">Matric Number</th>
+             <th style="width:40%;">Room number</th>
+           </tr>
+           <!-- <tr>
+           
+             <td>Nafis Ahmed</td>
+             <td>A20EC4044</td>
+             <td> <span class="action_btn"> <a href="#">View</a> </span> </td>
+           </tr> -->
+          
+         
+         </table>
+ <!-- *************************************************Java Scipt for table******************************************************** -->
+         <script>
+         function myFunction() {
+           var input, filter, table, tr, td, i, txtValue;
+           input = document.getElementById("myInput");
+           filter = input.value.toUpperCase();
+           table = document.getElementById("myTable");
+           tr = table.getElementsByTagName("tr");
+           for (i = 0; i < tr.length; i++) {
+             td = tr[i].getElementsByTagName("td")[0];
+             if (td) {
+               txtValue = td.textContent || td.innerText;
+               if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                 tr[i].style.display = "";
+               } else {
+                 tr[i].style.display = "none";
+               }
+             }       
+           }
+         }
+         </script>
+
+      </div>
+      <td> <span class="action_btn"> <a href="#">Remove</a> </span> </td>
+    </div>
+</div>
+</body>
+</html>
